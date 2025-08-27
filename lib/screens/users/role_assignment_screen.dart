@@ -80,7 +80,7 @@ class _RoleAssignmentScreenState extends State<RoleAssignmentScreen> {
                     ),
                     const SizedBox(height: 10),
                     DropdownButtonFormField<String>(
-                      value: _selectedRole,
+                      initialValue: _selectedRole,
                       decoration: InputDecoration(
                         labelText: 'Role',
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),

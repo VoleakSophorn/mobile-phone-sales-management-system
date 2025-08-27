@@ -127,7 +127,7 @@ class _CurrencySettingsScreenState extends State<CurrencySettingsScreen> {
                             ),
                             const SizedBox(height: 15),
                             DropdownButtonFormField<String>(
-                              value: _thousandSeparator,
+                              initialValue: _thousandSeparator,
                               decoration: InputDecoration(
                                 labelText: 'Thousand Separator',
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
@@ -147,7 +147,7 @@ class _CurrencySettingsScreenState extends State<CurrencySettingsScreen> {
                             ),
                             const SizedBox(height: 15),
                             DropdownButtonFormField<String>(
-                              value: _decimalSeparator,
+                              initialValue: _decimalSeparator,
                               decoration: InputDecoration(
                                 labelText: 'Decimal Separator',
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),

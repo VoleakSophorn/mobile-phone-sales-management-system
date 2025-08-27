@@ -176,7 +176,7 @@ class _AddEditUserScreenState extends State<AddEditUserScreen> {
                 ),
               const SizedBox(height: 15),
               DropdownButtonFormField<String>(
-                value: _role,
+                initialValue: _role,
                 decoration: InputDecoration(
                   labelText: 'Role',
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),

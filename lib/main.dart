@@ -2,8 +2,12 @@ import 'dart:async';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_phone_sales_management_system/firebase_options.dart';
 import 'package:mobile_phone_sales_management_system/providers/cart_provider.dart';
+import 'package:mobile_phone_sales_management_system/screens/analytics/analytics_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/auth/auth_gate.dart';
+import 'package:mobile_phone_sales_management_system/screens/dashboard/admin_dashboard_screen.dart';
+import 'package:mobile_phone_sales_management_system/screens/orders/orders_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/settings/settings_menu_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/reports/reports_menu_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/returns/returns_list_screen.dart';
@@ -18,7 +22,7 @@ import 'package:mobile_phone_sales_management_system/screens/settings/security_s
 import 'package:mobile_phone_sales_management_system/screens/settings/currency_settings_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/settings/tax_discount_config_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/settings/invoice_template_screen.dart';
-import 'package:mobile_phone_sales_management_system/screens/settings/backup_restore_screen.dart';
+
 import 'package:mobile_phone_sales_management_system/screens/products/product_list_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/customers/customer_list_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/pos/pos_main_screen.dart';
@@ -28,7 +32,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Initialize Firebase. On Android/iOS, native configs (google-services.json / GoogleService-Info.plist) are used.
   // For Web/Windows/Linux, run `flutterfire configure` to generate firebase_options.dart and use options.
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   // Global Flutter errors
   FlutterError.onError = (FlutterErrorDetails details) {
@@ -62,13 +68,15 @@ class MyApp extends StatelessWidget {
         ),
         home: const AuthGate(),
         routes: {
+          '/dashboard': (context) => const AdminDashboardScreen(),
           '/settings': (context) => const SettingsMenuScreen(),
           '/settings/users': (context) => const UserListScreen(),
           '/settings/security': (context) => const SecuritySettingsScreen(),
           '/settings/currency': (context) => const CurrencySettingsScreen(),
           '/settings/tax': (context) => const TaxDiscountConfigScreen(),
           '/settings/invoice': (context) => const InvoiceTemplateScreen(),
-          '/settings/backup': (context) => const BackupRestoreScreen(),
+          '/orders': (context) => const OrdersScreen(),
+          '/analytics': (context) => const AnalyticsScreen(),
           '/reports': (context) => const ReportsMenuScreen(),
           '/reports/sales': (context) => const SalesReportsScreen(),
           '/reports/daily': (context) => const DailySalesScreen(),

@@ -109,7 +109,7 @@ class _PromotionsScreenState extends State<PromotionsScreen> {
                         labelText: 'Apply to Product (Optional)',
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                       ),
-                      value: selectedProduct,
+                      initialValue: selectedProduct,
                       items: products.map((product) {
                         return DropdownMenuItem(
                           value: product,

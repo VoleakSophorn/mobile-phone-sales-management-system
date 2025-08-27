@@ -99,7 +99,7 @@ class _SalesReportsScreenState extends State<SalesReportsScreen> {
                     }
                     final cashiers = snapshot.data!.where((user) => user.role == 'Cashier').toList();
                     return DropdownButtonFormField<String>(
-                      value: _selectedCashierId,
+                      initialValue: _selectedCashierId,
                       decoration: InputDecoration(
                         labelText: 'Filter by Cashier',
                         border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),

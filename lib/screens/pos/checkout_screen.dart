@@ -49,7 +49,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               DropdownButtonFormField<String>(
-                value: paymentMethod,
+                initialValue: paymentMethod,
                 decoration: InputDecoration(
                   labelText: 'Payment Method',
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
@@ -358,7 +358,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                           ),
                           const SizedBox(height: 15),
                           DropdownButtonFormField<String>(
-                            value: _installmentInterval,
+                            initialValue: _installmentInterval,
                             decoration: InputDecoration(
                                 labelText: 'Installment Interval',
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))),
