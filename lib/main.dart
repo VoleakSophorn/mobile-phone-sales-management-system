@@ -18,7 +18,6 @@ import 'package:mobile_phone_sales_management_system/screens/settings/security_s
 import 'package:mobile_phone_sales_management_system/screens/settings/currency_settings_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/settings/tax_discount_config_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/settings/invoice_template_screen.dart';
-import 'package:mobile_phone_sales_management_system/screens/settings/backup_restore_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/products/product_list_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/customers/customer_list_screen.dart';
 import 'package:mobile_phone_sales_management_system/screens/pos/pos_main_screen.dart';
@@ -68,7 +67,6 @@ class MyApp extends StatelessWidget {
           '/settings/currency': (context) => const CurrencySettingsScreen(),
           '/settings/tax': (context) => const TaxDiscountConfigScreen(),
           '/settings/invoice': (context) => const InvoiceTemplateScreen(),
-          '/settings/backup': (context) => const BackupRestoreScreen(),
           '/reports': (context) => const ReportsMenuScreen(),
           '/reports/sales': (context) => const SalesReportsScreen(),
           '/reports/daily': (context) => const DailySalesScreen(),
