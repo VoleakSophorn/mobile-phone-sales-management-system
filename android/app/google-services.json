@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284917510863",
+    "project_id": "mobile-application-d13e0",
+    "storage_bucket": "mobile-application-d13e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284917510863:android:b53188bb03bd547b29bdba",
+        "android_client_info": {
+          "package_name": "com.example.mobile_phone_sales_management_system"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDMq-I7QsWB8b-UQFQhrkhCUZAb-j9zUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
